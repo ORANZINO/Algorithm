@@ -6,7 +6,7 @@ if n >= k:
     print(n - k)
 else:
     q = deque([n])
-    visited = [False] * 100010
+    visited = [False] * 100001
     next_q = deque()
     answer = 0
     flag = True
@@ -17,7 +17,7 @@ else:
             answer += 1
         temp = q.popleft()
         visited[temp] = True
-        if 0 <= temp * 2 < 100010 and k > temp:
+        if 0 <= temp * 2 <= 100000 and k > temp:
             if temp * 2 == k:
                 print(answer)
                 break
@@ -29,6 +29,6 @@ else:
                 print(answer + 1)
                 flag = False
                 break
-            if 0 <= nxt < 100010:
+            if 0 <= nxt <= 100000:
                 if not visited[nxt]:
                     next_q.append(nxt)
