@@ -1,3 +1,5 @@
+# 첫 번째 풀이
+
 from collections import deque
 
 t = int(input())
@@ -22,3 +24,15 @@ for _ in range(t):
         if temp + 3 <= n:
             q.append(temp + 3)
     print(answer)
+
+
+# 두 번째 풀이
+import sys
+input = sys.stdin.readline
+n_arr = []
+arr = [0, 1, 2, 4, 7, 13, 24, 44, 81, 149, 274]
+t = int(input())
+for _ in range(t):
+    n_arr.append(int(input()))
+ans = [arr[n] for n in n_arr]
+print(*ans, sep='\n')
