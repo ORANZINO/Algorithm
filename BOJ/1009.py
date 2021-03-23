@@ -1,11 +1,12 @@
 import sys
 input = sys.stdin.readline
-s = [[], [1], [6, 2, 4, 8], [1, 3, 9, 7], [6, 4], [5], [6], [1, 7, 9, 3], [6, 8, 4, 2], [1, 9]]
+
 t = int(input())
-for i in range(t):
+arr = [[10], [1], [2, 4, 8, 6], [3, 9, 7, 1], [4, 6], [5], [6], [7, 9, 3, 1], [8, 4, 2, 6], [9, 1]]
+
+for _ in range(t):
     a, b = map(int, input().split())
-    a = int(str(a)[-1])
-    if a != 0:
-        print(s[a][b % len(s[a])])
-    else:
-        print(10)
+    a %= 10
+    b %= len(arr[a])
+    print(arr[a][b - 1])
+
