@@ -2,31 +2,19 @@ import sys
 input = sys.stdin.readline
 
 
-def check(arr):
-    answer = 1
-
-    for i in range(n):
-        count_r = 1
-        count_c = 1
-        now_r = arr[i][0]
-        now_c = arr[0][i]
-        for j in range(1, n):
-            if arr[i][j] != now_r:
-                answer = max(answer, count_r)
-                count_r = 1
-                now_r = arr[i][j]
-            elif arr[i][j] == now_r:
-                count_r += 1
-            if arr[j][i] != now_c :
-                answer = max(answer, count_c)
-                count_c = 1
-                now_c = arr[j][i]
-            elif arr[j][i] == now_c:
-                count_c += 1
-            if j == (n - 1):
-                answer = max(answer, count_r, count_c)
-
-    return answer
+def check(i, j):
+    steps = [[(1, 0), (-1, 0)], [(0, 1), (0, -1)]]
+    result = 1
+    for step in steps:
+        count = 1
+        for k in range(2):
+            x, y = i, j
+            while (0 <= x + step[k][0] < n) and (0 <= y + step[k][1] < n) and (arr[x][y] == arr[x + step[k][0]][y + step[k][1]]):
+                x += step[k][0]
+                y += step[k][1]
+                count += 1
+        result = max(result, count)
+    return result
 
 
 n = int(input())
@@ -36,13 +24,12 @@ ans = 1
 
 for i in range(n):
     for j in range(n):
-        if i < (n - 1) and arr[i][j] != arr[i + 1][j]:
+        if i < (n - 1):
             arr[i][j], arr[i + 1][j] = arr[i + 1][j], arr[i][j]
-            ans = max(ans, check(arr))
+            ans = max(ans, check(i, j), check(i + 1, j))
             arr[i][j], arr[i + 1][j] = arr[i + 1][j], arr[i][j]
-        if j < (n - 1) and arr[i][j] != arr[i][j + 1]:
+        if j < (n - 1):
             arr[i][j], arr[i][j + 1] = arr[i][j + 1], arr[i][j]
-            ans = max(ans, check(arr))
+            ans = max(ans, check(i, j), check(i, j + 1))
             arr[i][j], arr[i][j + 1] = arr[i][j + 1], arr[i][j]
 print(ans)
-
