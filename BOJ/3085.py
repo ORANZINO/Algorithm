@@ -45,3 +45,4 @@ for i in range(n):
             ans = max(ans, check(arr))
             arr[i][j], arr[i][j + 1] = arr[i][j + 1], arr[i][j]
 print(ans)
+
