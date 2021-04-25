@@ -7,6 +7,7 @@ def dfs(k, visited, depth):
 
     for i in graph[k]:
         if not visited[i]:
+            # 목표 depth 도착
             if depth == 3:
                 return True
             if dfs(i, visited, depth + 1):
@@ -19,6 +20,7 @@ n, m = map(int, input().split())
 graph = [[] for _ in range(n)]
 flag = False
 
+# 그래프 입력받기
 for _ in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)

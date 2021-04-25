@@ -2,6 +2,8 @@ e, s, m = map(int, input().split())
 count = 1
 e_, s_, m_ = [1, 1, 1]
 
+# 분기점 만날 떄마다 1로 회귀
+
 while (e != e_) or (s != s_) or (m != m_):
     e_ += 1
     s_ += 1
