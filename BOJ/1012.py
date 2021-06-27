@@ -24,3 +24,5 @@ for _ in range(t):
                 dfs((i, j), field, visited)
                 answer += 1
     print(answer)
+    
+# 지렁이를 발견하면 dfs를 수행해서 해당 영역 
