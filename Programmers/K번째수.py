@@ -11,5 +11,4 @@ def solution(array, commands):
 2. 슬라이스된 부분 Sort
 3. Sort된 결과물에서 원하는 인덱스 반환
 의 과정을 거쳐 정답을 구할 수 있었다.
-
 """
