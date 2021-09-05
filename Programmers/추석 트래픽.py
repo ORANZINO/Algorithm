@@ -18,3 +18,8 @@ def solution(lines):
     return answer
 
 
+"""
+모든 line에 대해서 시작시간과 끝 시간을 표시
+모든 line에 대해 이후의 line들이 1초 내에 포함되는지 검사
+제일 많은 line이 포함된 경우를 return
+"""

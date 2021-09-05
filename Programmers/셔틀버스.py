@@ -26,3 +26,12 @@ def solution(n, t, m, timetable):
         return num_to_time(max_key)
     else:
         return num_to_time(max(dic[max_key]) - 1)
+
+
+"""
+1. 주어진 시간을 정렬하고 모두 숫자(분)로 환산
+2. 가능한 시간을 모두 dictionary의 key로 만든다. -> 버스 나타냄
+3. 각 시간의 버스마다 가능한 인원을 모두 태운다.
+4. 마지막 시간의 버스가 다 차지 않았을 경우 마지막 버스의 시간을 return
+5. 마지막 시간의 버스가 다 찼을 경우 마지막 승객보다 1분 일찍 도착하도록 한다. 
+"""

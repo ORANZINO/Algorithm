@@ -38,3 +38,9 @@ def solution(dartResult):
 
     return sum(arr)
 
+
+"""
+주어진 dartResult를 숫자, string, option으로 분리
+각 string과 option에 맞게 각 숫자들을 처리
+숫자들의 합을 return
+"""
