@@ -18,3 +18,8 @@ def solution(record):
             answer[i] = f'{dic[a[1]]}님이 나갔습니다.'
     return answer
 
+
+"""
+모든 record를 프로세싱하고 최종적인 user_id와 name의 매칭을
+반영하여 출력해주는 문제이다.
+"""

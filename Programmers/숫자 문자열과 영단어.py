@@ -5,3 +5,6 @@ def solution(s):
         s = s.replace(key, dic[key])
     return int(s)
 
+"""
+모든 문자열을 dictionary에서 찾아서 숫자로 replace해준다.
+"""

@@ -18,3 +18,8 @@ def solution(new_id):
         new_id += new_id[-1]
     return new_id
 
+
+"""
+정규표현식이 핵심적이었던 문제.
+주어진 direction에 맞추어 규칙을 적용하되, 올바르게 정규식을 사용하는 것이 중요했다.
+"""
