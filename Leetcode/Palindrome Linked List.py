@@ -19,3 +19,9 @@ class Solution:
                 return False
         return True
 
+
+
+"""
+주어진 Linked List를 List화하여 palindrome 여부를 검사.
+이 때, pop의 효율성을 위해 deque를 사용하였다.
+"""

@@ -17,3 +17,8 @@ class Solution:
 
         return prev
 
+
+"""
+Linked List를 Reverse하는 문제.
+Linked List를 travese하며 link들의 방향을 모두 바꾸어주는 방식으로 구현했다.
+"""
