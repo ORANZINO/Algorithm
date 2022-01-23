@@ -18,3 +18,6 @@ class Solution:
 
         return answer
 
+"""
+가능한 경우를 dfs로 모두 알아낼 수 있다.
+"""
