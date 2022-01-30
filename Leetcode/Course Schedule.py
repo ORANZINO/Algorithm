@@ -28,3 +28,8 @@ class Solution:
 
         return True
 
+"""
+Cycle이 만들어지는지 여부를 검사하는 문제이다.
+DFS를 통해서 node들을 방문하되 새로 방문하게 되는 노드를 이미 방문한 적이 있다면 False를, 그 외의 경우에는 True를 
+리턴한다.
+"""
