@@ -20,3 +20,8 @@ class Solution:
         node.right = self.sortedArrayToBST(nums[mid + 1:])
 
         return node
+
+
+"""
+루트 노드를 정하고 그 외의 부분을 recursion으로 다시 배치하는 방식으로 tree화시킨다
+"""
