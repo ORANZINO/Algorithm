@@ -28,3 +28,6 @@ class Solution:
             leaves = new_leaves
         return leaves
 
+"""
+leaf들을 하나씩 없애서 마지막에 남는 가운데의 노드들을 리턴한다.
+"""
