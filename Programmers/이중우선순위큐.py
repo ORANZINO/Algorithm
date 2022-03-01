@@ -20,3 +20,7 @@ def solution(operations):
                 max_heap.remove(-temp)
     return [0, 0] if not max_heap else [-heapq.heappop(max_heap), heapq.heappop(min_heap)]
 
+
+'''
+최대 힙과 최소 힙 2개를 운용하여 답을 도출한다.
+'''
