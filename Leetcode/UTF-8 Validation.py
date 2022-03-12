@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def validUtf8(self, data: List[int]) -> bool:
         def check(size):
@@ -21,4 +24,7 @@ class Solution:
                 return False
         return True
 
-    
+'''
+비트 연산을 이용해서 utf-8 검증을 보다 효율적으로 했다.
+check함수로 반복적인 코드를 줄였음
+'''

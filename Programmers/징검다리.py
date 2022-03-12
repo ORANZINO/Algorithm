@@ -21,3 +21,7 @@ def solution(distance, rocks, n):
             answer = min_interval
     return answer
 
+'''
+이분 탐색으로 최종 min_interval을 탐색
+무엇을 이분탐색할 것인지 결정하는 게 중요하다는 것.
+'''
