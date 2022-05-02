@@ -20,8 +20,7 @@ def solution(board):
         for step in steps:
             nx, ny = x + step[0], y + step[1]
             tnx, tny = tail(nx, ny, pos)
-            if 0 <= nx < n and 0 <= ny < n and board[nx][ny] != 1 and 0 <= tnx < n and 0 <= tny < n and board[tnx][
-                tny] != 1:
+            if 0 <= nx < n and 0 <= ny < n and board[nx][ny] != 1 and 0 <= tnx < n and 0 <= tny < n and board[tnx][tny] != 1:
                 if distance[nx][ny][pos] > (dist + 1):
                     heapq.heappush(q, (dist + 1, nx, ny, pos))
                     distance[nx][ny][pos] = dist + 1
