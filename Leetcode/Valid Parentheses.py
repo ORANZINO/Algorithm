@@ -3,9 +3,9 @@ class Solution:
         pair_dic = {')': '(', '}': '{', ']': '['}
         stack = []
         for c in s:
-            if stack and stack[-1] == pair_dic[c]:
+            if c in pair_dic and stack and stack[-1] == pair_dic[c]:
                 stack.pop()
             else:
                 stack.append(c)
-        return True if not stack else False
+        return not bool(stack)
 
